@@ -48,7 +48,6 @@ body {
     min-height: 500px;
     transform-style: preserve-3d;
     transform: rotateX(var(--move-y)) rotateY(var(--move-x));
-    will-change: transform;
     /* transition: transform var(--transition); */
 }
 
@@ -62,25 +61,24 @@ body {
     justify-content: center;
 
 }
+.layers__container, .layer-1, .layer-2, .layer-3, .layer-4, .layer-5 {
+    will-change: transform;
+}
 
 .layer-1 {
     transform: translateZ(-55px) scale(1.06);
-    will-change: transform;
 }
 
 .layer-2 {
     transform: translateZ(80px) scale(5);
-    will-change: transform;
 }
 
 .layer-3 {
     transform: translateZ(180px) scale(.9);
-    will-change: transform;
 }
 
 .layer-4 {
     transform: translateZ(180px) scale(.9);
-    will-change: transform;
 }
 
 .hero-content {
@@ -123,5 +121,4 @@ body {
 .layer-5 {
     transform: translateZ(300px) scale(2);
     pointer-events: none;
-    will-change: transform;
 }
